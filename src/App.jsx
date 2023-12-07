@@ -1,4 +1,4 @@
-import { RiMenu3Fill, RiUser3Line, RiAddLine, RiLightbulbLine, RiPieChartLine, RiCloseLine } from 'react-icons/ri'
+import { RiMenu3Fill, RiUser3Line, RiAddLine, RiLightbulbLine, RiPieChartLine, RiCloseLine, RiSearch2Line } from 'react-icons/ri'
 import Sidebar from './components/shared/Sidebar'
 import { useState } from 'react'
 
@@ -29,8 +29,21 @@ function App() {
           </button>
         </nav>
         <main className='lg:pl-28 grid grid-cols-1 lg:grid-cols-8'>
-          <div className='lg:col-span-6 bg-red-300'>Hola</div>
-          <div className='lg:col-span-2 bg-red-500 fixed lg:static right-0'>Carrito</div>
+          <div className='lg:col-span-6'>
+            <header className='p-4'>
+              <div>
+                <h1 className='text-2xl text-gray-300'>Jeager Resto</h1>
+                <p className='text-gray-500'>7 diciembre 2023</p>
+              </div>
+              <form>
+                <div className='w-full relative'>
+                  <RiSearch2Line/>
+                  <input type="text" placeholder='Buscar platillo'/>
+                </div>
+              </form>
+            </header>
+          </div>
+          <div className='lg:col-span-2 fixed lg:static right-0'>Carrito</div>
         </main>
       </div>
   )
